@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iSc-GB-9oz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hkr-T8-v8q">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENZ-LO-VB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="iSc-GB-9oz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rM7-h9-4HS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="itT-iw-dJc" kind="relationship" relationship="rootViewController" id="Se9-Zu-EwY"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-555" y="100"/>
+        </scene>
+        <!--Game Of Thrones Episodes-->
+        <scene sceneID="KwX-F1-2qR">
+            <objects>
+                <tableViewController id="itT-iw-dJc" customClass="ViewController" customModule="GameOfThrones" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oRT-XY-uOc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fkt-1j-uDC">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fkt-1j-uDC" id="0d7-ZF-Pa9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="itT-iw-dJc" id="Clw-EM-FHk"/>
+                            <outlet property="delegate" destination="itT-iw-dJc" id="vs2-AC-eE7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Game Of Thrones Episodes" id="zlJ-ax-geP">
+                        <barButtonItem key="backBarButtonItem" title="GOT Episodes" id="NAV-5g-KvF"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ih4-eP-Hsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="100"/>
+        </scene>
+        <!--Episode View-->
+        <scene sceneID="2Hp-XB-Rp8">
+            <objects>
+                <viewController storyboardIdentifier="EpisodeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jkb-k4-brZ" customClass="EpisodeView" customModule="GameOfThrones" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BKA-o1-Tb4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8V6-xj-Ej3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xPo-Pp-RiW">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="163.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfO-qq-kkD">
+                                        <rect key="frame" x="0.0" y="163.5" width="414" height="163.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjM-fk-J6J">
+                                        <rect key="frame" x="0.0" y="327" width="414" height="164"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airdate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVn-zW-35U">
+                                        <rect key="frame" x="0.0" y="491" width="414" height="163.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desciption" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP7-Zb-YCM">
+                                        <rect key="frame" x="0.0" y="654.5" width="414" height="163.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8V6-xj-Ej3" firstAttribute="leading" secondItem="ccK-pf-WJJ" secondAttribute="leading" id="3xL-c2-QyM"/>
+                            <constraint firstItem="ccK-pf-WJJ" firstAttribute="trailing" secondItem="8V6-xj-Ej3" secondAttribute="trailing" id="CGa-8t-gSm"/>
+                            <constraint firstItem="8V6-xj-Ej3" firstAttribute="top" secondItem="ccK-pf-WJJ" secondAttribute="top" id="Lcz-Qy-243"/>
+                            <constraint firstItem="ccK-pf-WJJ" firstAttribute="bottom" secondItem="8V6-xj-Ej3" secondAttribute="bottom" id="dIZ-ao-Kdd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ccK-pf-WJJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sgk-LZ-Z9j"/>
+                    <connections>
+                        <outlet property="airdate" destination="BVn-zW-35U" id="CpV-tn-nCg"/>
+                        <outlet property="episodeDescription" destination="DP7-Zb-YCM" id="xW2-c0-dwa"/>
+                        <outlet property="episodeImage" destination="xPo-Pp-RiW" id="HCd-xA-LsC"/>
+                        <outlet property="episodeName" destination="GfO-qq-kkD" id="5hb-gc-6Kk"/>
+                        <outlet property="episodeNumber" destination="UjM-fk-J6J" id="8zB-nA-Q8H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSl-MU-xsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437" y="90"/>
+        </scene>
+    </scenes>
+</document>
